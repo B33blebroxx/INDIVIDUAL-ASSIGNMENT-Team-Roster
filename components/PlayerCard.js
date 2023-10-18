@@ -22,7 +22,7 @@ export default function PlayerCard({ playerObj, onUpdate }) {
         <ListGroup.Item>Position: {playerObj.player_role}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Link href={`/player/${playerObj.firebaseKey}`} passHref>
+        <Link href={`/player/edit/${playerObj.firebaseKey}`} passHref>
           <Button>Edit Player</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisPlayer}>

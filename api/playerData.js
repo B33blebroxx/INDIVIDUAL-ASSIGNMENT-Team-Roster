@@ -56,9 +56,22 @@ const updatePlayer = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/players/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getPlayers,
   deletePlayer,
   createPlayer,
   updatePlayer,
+  getSinglePlayer,
 };
