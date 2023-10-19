@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
-import { getPlayers } from '../api/playerData';
+import { getAllPlayers } from '../api/playerData';
 import PlayerCard from '../components/PlayerCard';
 
 function ShowTeamPlayers() {
@@ -11,7 +11,7 @@ function ShowTeamPlayers() {
   const { user } = useAuth();
 
   const getAllTeamPlayers = () => {
-    getPlayers(user.uid).then(setPlayers);
+    getAllPlayers(user.uid).then(setPlayers);
   };
 
   useEffect(() => {

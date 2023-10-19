@@ -2,7 +2,7 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-const getPlayers = (uid) => new Promise((resolve, reject) => {
+const getAllPlayers = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/players.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
@@ -11,7 +11,6 @@ const getPlayers = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.warn(data);
       if (data) {
         resolve(Object.values(data));
       } else {
@@ -68,10 +67,21 @@ const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const searchPlayers = (searchValue, uid) => new Promise((resolve, reject) => {
+  getAllPlayers(uid).then((playerArray) => {
+    const searchResults = playerArray.filter((player) => (
+      player.player_name.toLowerCase().includes(searchValue)
+      || player.player_role.toLowerCase().includes(searchValue)
+    ));
+    resolve(searchResults);
+  }).catch(reject);
+});
+
 export {
-  getPlayers,
+  getAllPlayers,
   deletePlayer,
   createPlayer,
   updatePlayer,
   getSinglePlayer,
+  searchPlayers,
 };
