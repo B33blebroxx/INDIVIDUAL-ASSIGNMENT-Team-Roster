@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
-import { useAuth } from '../utils/context/authContext';
-import { getAllPlayers } from '../api/playerData';
-import PlayerCard from '../components/PlayerCard';
+import { useAuth } from '../../utils/context/authContext';
+import { getAllPlayers } from '../../api/playerData';
+import PlayerCard from '../../components/PlayerCard';
 
 function ShowTeamPlayers() {
   const [players, setPlayers] = useState([]);

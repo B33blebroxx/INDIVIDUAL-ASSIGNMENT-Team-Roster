@@ -1,0 +1,50 @@
+{
+  "-SC2VnX4qGkpfh8Rv205": {
+    "firebaseKey": "-SC2VnX4qGkpfh8Rv205",
+    "team_name": "XenoMorphs",
+    "city": "LV-426",
+    "logo": "https://i.pinimg.com/564x/43/f4/a0/43f4a03e4323eaa031d5b5b20f35ede2.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": true
+  },
+  "-203Ye89Qy6i2hXc6276": {
+    "firebaseKey": "-203Ye89Qy6i2hXc6276",
+    "team_name": "Force",
+    "city": "Dagobah Swamp",
+    "logo": "https://i.pinimg.com/564x/68/ab/fc/68abfcb7439fb7dad6af60ab6b802f3b.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": true
+  },
+  "-uscAU4PY7YBk7w2Kt08": {
+    "firebaseKey": "-uscAU4PY7YBk7w2Kt08",
+    "team_name": "Jawas",
+    "city": "Tatooine",
+    "logo": "https://i.pinimg.com/564x/5e/ab/63/5eab63779e97bbda85640025942096ee.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": true
+  },
+  "-vAVUpHkek5Hyj7ZDcvO": {
+    "firebaseKey": "-vAVUpHkek5Hyj7ZDcvO",
+    "team_name": "Bottom Dwellers",
+    "city": "Black Lagoon",
+    "logo": "https://i.pinimg.com/564x/43/a9/63/43a963cc50ebbff84ede4092bc0d0f89.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": false
+  },
+  "-tJ9BVGnGhaWh3VKROTF": {
+    "firebaseKey": "-tJ9BVGnGhaWh3VKROTF",
+    "team_name": "Sharks",
+    "city": "Amity Island",
+    "logo": "https://i.pinimg.com/564x/78/9c/1d/789c1dea2dcb87cde578bf711e1556a5.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": true
+  },
+  "-d0xbevOwYvuiTeLxOSg": {
+    "firebaseKey": "-d0xbevOwYvuiTeLxOSg",
+    "team_name": "RingWraiths",
+    "city": "Angmar",
+    "logo": "https://i.pinimg.com/564x/d9/5f/9e/d95f9e0c66b107ad2380797b0bc2b661.jpg",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
+    "favorite": false
+  }
+}
