@@ -32,13 +32,13 @@ function NewPlayerForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updatePlayer(formInput).then(() => router.push('/team'));
+      updatePlayer(formInput).then(() => router.push('/player/players'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updatePlayer(patchPayload).then(() => {
-          router.push('/team');
+          router.push('/player/players');
         });
       });
     }
@@ -67,6 +67,7 @@ function NewPlayerForm({ obj }) {
           onChange={handleChange}
           required
         >
+          <option value="" disabled>Select a Role</option>
           <option value="Center">Center</option>
           <option value="Goalie">Goalie</option>
           <option value="Winger">Winger</option>
