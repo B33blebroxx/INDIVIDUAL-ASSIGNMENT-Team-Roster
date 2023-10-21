@@ -3,12 +3,12 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
-import { deleteTeam } from '../api/teamData';
+import { deleteTeamPlayerRelationship } from '../api/mergedData';
 
 export default function TeamCard({ teamObj, onUpdate }) {
   const deleteThisTeam = () => {
     if (window.confirm(`Delete Team ${teamObj.team_name}?`)) {
-      deleteTeam(teamObj.firebaseKey).then(() => onUpdate());
+      deleteTeamPlayerRelationship(teamObj.firebaseKey).then(() => onUpdate());
     }
   };
 

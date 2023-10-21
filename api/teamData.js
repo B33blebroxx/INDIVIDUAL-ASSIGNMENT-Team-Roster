@@ -64,10 +64,23 @@ const updateTeam = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getTeamPlayers = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/players.json?orderBy="team_id"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getTeams,
   getSingleTeam,
   deleteTeam,
   createTeam,
   updateTeam,
+  getTeamPlayers,
 };
