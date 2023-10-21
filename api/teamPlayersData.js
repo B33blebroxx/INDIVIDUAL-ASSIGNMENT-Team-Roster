@@ -1,22 +1,7 @@
 import { clientCredentials } from '../utils/client';
+import { getTeamPlayers } from './teamData';
 
 const endpoint = clientCredentials.databaseURL;
-
-const getTeamPlayers = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/team_players.json?orderBy="team_id"&equalTo="${firebaseKey}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((response) => response.json())
-    .then((data) => {
-      if (data) {
-        resolve(Object.values(data));
-      } else {
-        resolve([]);
-      }
-    }).catch(reject);
-});
 
 const createTeamPlayer = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/team_players.json`, {
@@ -49,17 +34,6 @@ const getSingleTeamPlayer = async (playerId, teamId) => {
   return singleTeamPlayer;
 };
 
-const deleteTeamPlayer = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/team_players/${firebaseKey}.json`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((response) => response.json())
-    .then(resolve)
-    .catch(reject);
-});
-
 export {
-  getTeamPlayers, createTeamPlayer, updateTeamPlayer, getSingleTeamPlayer, deleteTeamPlayer,
+  createTeamPlayer, updateTeamPlayer, getSingleTeamPlayer,
 };

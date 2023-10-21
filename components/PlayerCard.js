@@ -21,6 +21,9 @@ export default function PlayerCard({ playerObj, onUpdate }) {
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Position: {playerObj.player_role}</ListGroup.Item>
       </ListGroup>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Team: {playerObj.team_id ? playerObj.team_name : '' }</ListGroup.Item>
+      </ListGroup>
       <Card.Body>
         <Link href={`/player/edit/${playerObj.firebaseKey}`} passHref>
           <Button>Edit Player</Button>
@@ -38,6 +41,8 @@ PlayerCard.propTypes = {
     firebaseKey: PropTypes.string,
     player_name: PropTypes.string,
     player_role: PropTypes.string,
+    team_name: PropTypes.string,
+    team_id: PropTypes.string,
     image: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
