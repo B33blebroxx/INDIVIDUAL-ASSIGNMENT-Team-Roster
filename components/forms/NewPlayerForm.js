@@ -110,17 +110,6 @@ function NewPlayerForm({ obj }) {
           }
         </Form.Select>
 
-        {/* TEAM INPUT  */}
-        <FloatingLabel controlId="floatingInput3" label="Type Team Name to Confirm" className="mb-3">
-          <Form.Control
-            type="text"
-            placeholder="Type Team Name to Confirm"
-            name="team_name"
-            value={formInput.team_name}
-            onChange={handleChange}
-            required
-          />
-        </FloatingLabel>
       </FloatingLabel>
 
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Player </Button>
