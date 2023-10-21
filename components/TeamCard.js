@@ -30,6 +30,9 @@ export default function TeamCard({ teamObj, onUpdate }) {
         <Button variant="danger" onClick={deleteThisTeam}>
           Delete Team
         </Button>
+        <Link href={`/team/${teamObj.firebaseKey}`} passHref>
+          <Button variant="info">View Team Details</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
