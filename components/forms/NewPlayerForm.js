@@ -111,7 +111,7 @@ function NewPlayerForm({ obj }) {
         </Form.Select>
 
         {/* TEAM INPUT  */}
-        <FloatingLabel controlId="floatingInput3" label="Type the Team Name to Confirm Roster Add" className="mb-3">
+        <FloatingLabel controlId="floatingInput3" label="Type Team Name to Confirm" className="mb-3">
           <Form.Control
             type="text"
             placeholder="Type Team Name to Confirm"
