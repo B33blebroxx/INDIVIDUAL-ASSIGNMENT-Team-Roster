@@ -4,20 +4,24 @@ import { useEffect, useState } from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { createPlayer, updatePlayer } from '../../api/playerData';
+import { getTeams } from '../../api/teamData';
 
 const initialState = {
   player_name: '',
   player_role: '',
   image: '',
+  team: '',
 
 };
 
 function NewPlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [teams, setTeams] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getTeams(user.uid).then(setTeams);
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -84,6 +88,41 @@ function NewPlayerForm({ obj }) {
           required
         />
       </FloatingLabel>
+      <FloatingLabel controlId="floatingSelect" label="Team">
+        <Form.Select
+          aria-label="Team"
+          name="team_id"
+          onChange={handleChange}
+          className="mb-3"
+          value={formInput.team_id}
+          required
+        >
+          <option value="">Select a Team</option>
+          {
+            teams.map((team) => (
+              <option
+                key={team.firebaseKey}
+                value={team.firebaseKey}
+              >
+                {team.team_name}
+              </option>
+            ))
+          }
+        </Form.Select>
+
+        {/* TEAM INPUT  */}
+        <FloatingLabel controlId="floatingInput3" label="Type the Team Name to Confirm Roster Add" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Type Team Name to Confirm"
+            name="team_name"
+            value={formInput.team_name}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+      </FloatingLabel>
+
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Player </Button>
     </Form>
   );
