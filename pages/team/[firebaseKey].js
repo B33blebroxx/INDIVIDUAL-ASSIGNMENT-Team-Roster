@@ -36,7 +36,7 @@ export default function ViewTeam() {
           <Button size="md" className="btn-m mt-2 mb-4" onClick={() => router.push('/player/new')}>Add Player</Button>
         </div>
         <div className="d-flex flex-wrap justify-content-center">
-          {teamDetails.players?.map((player) => (
+          {teamDetails.players && teamDetails.players.map((player) => (
             <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getDetails} />
           ))}
         </div>

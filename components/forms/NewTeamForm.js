@@ -33,14 +33,14 @@ export default function NewTeamForm({ obj }) {
     e.preventDefault();
 
     if (obj.firebaseKey) {
-      updateTeam(formInput).then(() => router.push(`/team/${obj.firebaseKey}`));
+      updateTeam(formInput).then(() => router.push('/team/teams'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createTeam(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateTeam(patchPayload).then(() => {
-          router.push(`/team/${obj.firebaseKey}`);
+          router.push('/team/teams');
         });
       });
     }
