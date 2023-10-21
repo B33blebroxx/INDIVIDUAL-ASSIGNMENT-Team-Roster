@@ -19,7 +19,8 @@ export default function Search() {
     return () => {
       setFilteredPlayers([]);
     };
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchInput]);
 
   return (
     <>
