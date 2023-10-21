@@ -58,15 +58,20 @@ function NewPlayerForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput1" label="Player Role" className="mb-3">
-        <Form.Control
+      <FloatingLabel controlId="floatingInput4" label="Select Role" className="mb-3 f-w f-c">
+        <Form.Select
           type="text"
-          placeholder="Player Role"
+          placeholder="Select Role"
           name="player_role"
           value={formInput.player_role}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="Center">Center</option>
+          <option value="Goalie">Goalie</option>
+          <option value="Winger">Winger</option>
+          <option value="Defenseman">Defenseman</option>
+        </Form.Select>
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput1" label="Player Image" className="mb-3">
         <Form.Control
