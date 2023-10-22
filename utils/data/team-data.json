@@ -31,14 +31,6 @@
     "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
     "favorite": false
   },
-  "-tJ9BVGnGhaWh3VKROTF": {
-    "firebaseKey": "-tJ9BVGnGhaWh3VKROTF",
-    "team_name": "Sharks",
-    "city": "Amity Island",
-    "logo": "https://i.pinimg.com/564x/78/9c/1d/789c1dea2dcb87cde578bf711e1556a5.jpg",
-    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
-    "favorite": true
-  },
   "-d0xbevOwYvuiTeLxOSg": {
     "firebaseKey": "-d0xbevOwYvuiTeLxOSg",
     "team_name": "RingWraiths",
@@ -46,5 +38,13 @@
     "logo": "https://i.pinimg.com/564x/d9/5f/9e/d95f9e0c66b107ad2380797b0bc2b661.jpg",
     "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42",
     "favorite": false
+  },
+  "-NhJ_Ra5l0I2NYUSIEUU": {
+    "city": "14th Century England",
+    "favorite": true,
+    "firebaseKey": "-NhJ_Ra5l0I2NYUSIEUU",
+    "logo": "https://laughingsquid.com/wp-content/uploads/humans.png",
+    "team_name": "Humans",
+    "uid": "gxi8RYFybXVh1ht4WjXEj0oiuq42"
   }
 }

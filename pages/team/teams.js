@@ -19,7 +19,7 @@ export default function AllTeams() {
 
   return (
     <>
-      <h1 className="text-center mt-4">TEAMS</h1>
+      <h1 className="text-center mt-4">Teams</h1>
       <hr className="hr-m mb-4 w-10" />
       <div className="mt-3 mb-4 text-center">
         <Link href="/team/new" passHref>

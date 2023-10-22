@@ -17,7 +17,7 @@ export default function SearchBar() {
   };
   return (
     <Form className="search-bar" onSubmit={handleSubmit}>
-      <FormControl type="text" placeholder="Search Players or Roles" size="sm" onChange={handleChange} value={searchInput} />
+      <FormControl type="text" placeholder="Search Players, Teams, or Positions" size="med" onChange={handleChange} value={searchInput} />
     </Form>
   );
 }

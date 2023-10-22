@@ -72,6 +72,8 @@ const searchPlayers = (searchValue, uid) => new Promise((resolve, reject) => {
     const searchResults = playerArray.filter((player) => (
       player.player_name.toLowerCase().includes(searchValue)
       || player.player_role.toLowerCase().includes(searchValue)
+      || player.team_name.toLowerCase().includes(searchValue)
+
     ));
     resolve(searchResults);
   }).catch(reject);

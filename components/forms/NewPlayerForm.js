@@ -62,22 +62,6 @@ function NewPlayerForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput4" label="Select Role" className="mb-3 f-w f-c">
-        <Form.Select
-          type="text"
-          placeholder="Select Role"
-          name="player_role"
-          value={formInput.player_role}
-          onChange={handleChange}
-          required
-        >
-          <option value="" disabled>Select a Role</option>
-          <option value="Center">Center</option>
-          <option value="Goalie">Goalie</option>
-          <option value="Winger">Winger</option>
-          <option value="Defenseman">Defenseman</option>
-        </Form.Select>
-      </FloatingLabel>
       <FloatingLabel controlId="floatingInput1" label="Player Image" className="mb-3">
         <Form.Control
           type="url"
@@ -87,6 +71,22 @@ function NewPlayerForm({ obj }) {
           onChange={handleChange}
           required
         />
+      </FloatingLabel>
+      <FloatingLabel controlId="floatingInput4" label="Select Position" className="mb-3 f-w f-c">
+        <Form.Select
+          type="text"
+          placeholder="Select Position"
+          name="player_role"
+          value={formInput.player_role}
+          onChange={handleChange}
+          required
+        >
+          <option value="" disabled>Select a Position</option>
+          <option value="Center">Center</option>
+          <option value="Goalie">Goalie</option>
+          <option value="Winger">Winger</option>
+          <option value="Defenseman">Defenseman</option>
+        </Form.Select>
       </FloatingLabel>
       <FloatingLabel controlId="floatingSelect" label="Team">
         <Form.Select
@@ -109,7 +109,16 @@ function NewPlayerForm({ obj }) {
             ))
           }
         </Form.Select>
-
+        <FloatingLabel controlId="floatingInput3" label="Type the Team Name to Confirm" className="mb-3" required>
+          <Form.Control
+            type="text"
+            placeholder="Type Team Name to Confirm"
+            name="team_name"
+            value={formInput.team_name}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
       </FloatingLabel>
 
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Player </Button>

@@ -9,10 +9,10 @@ import SearchBar from './SearchBar';
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className="nav" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Team Roster Central</Navbar.Brand>
+          <Navbar.Brand id="brand-logo">Team Roster Central</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -27,9 +27,9 @@ export default function NavBar() {
             <Link passHref href="/player/new">
               <Nav.Link>Add Player</Nav.Link>
             </Link>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
           <SearchBar />
+          <Button id="sign-out" variant="danger" onClick={signOut}>Sign Out</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
