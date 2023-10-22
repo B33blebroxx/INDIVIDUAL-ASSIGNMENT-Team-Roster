@@ -1,11 +1,16 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Mohave&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-html,
+#sign-out {
+  margin-left: 40px;
+  font-family: 'Mohave', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Mohave', sans-serif;
 }
 
 a {
@@ -18,5 +23,40 @@ a {
 }
 
 body {
-  background-color: darkgray;
+  background-color: dimgray
+}
+
+#brand-logo {
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 32px;
+}
+
+.nav {
+  font-family: 'Bungee Shade', sans-serif;
+  text-align: center;
+}
+
+.search-bar {
+  width: 250px;
+  font-size: 25px;
+  font-family: 'Mohave', sans-serif;
+  margin-right: 30px;
+}
+
+#player-img {
+  height: 425px;
+}
+
+.team-logo {
+  height: 425px;
+}
+
+#player-card-div {
+  padding: 15px;
+  text-align: center;
+}
+
+#team-card-div {
+  padding: 15px;
+  text-align: center;
 }
